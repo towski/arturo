@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.has_rdoc = 'false'
   current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
   gem.specification_version = 2
-  gem.add_runtime_dependency      'rails',        '~> 3.2'
+  gem.add_runtime_dependency      'rails',        '>= 3.1'
   gem.add_development_dependency  'mocha'
   gem.add_development_dependency  'rake'
   gem.add_development_dependency  'redgreen',     '~> 1.2'
