@@ -15,13 +15,13 @@ class ArturoFeaturesHelperTest < ActiveSupport::TestCase
     end
 
     def bad_feature
-      feature = Factory(:feature)  
+      feature = Factory(:feature)
       feature.deployment_percentage = 101
       feature.valid?
       return feature
     end
   end
-  
+
   def test_error_messages_for
     output = "<ul class=\"errors\"><li class=\"error\">must be less than or equal to 100</li></ul>"
 
@@ -32,8 +32,10 @@ class ArturoFeaturesHelperTest < ActiveSupport::TestCase
       :virtual_path => "partial"
     )
 
-    assert_equal output, template_result.render( Context.new, {} )
-    assert template_result.render( Context.new, {} ).html_safe?
-  
+    result = template_result.render( Context.new, {} )
+
+    assert_equal output, result
+    assert result.html_safe?
+
   end
 end

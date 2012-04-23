@@ -29,8 +29,11 @@ module Arturo
     end
 
     # Create a new Feature
+    # @param [Hash, nil] attribute hash to set on new object
+    # @param [Hash, nil]
+    # @return [Arturo::Feature] newly initialized feature
     def initialize(attributes = {}, options = {})
-      super(DEFAULT_ATTRIBUTES.merge(attributes), options)
+      super(DEFAULT_ATTRIBUTES.merge(attributes || {}), options)
     end
 
     # @param [Object] feature_recipient a User, Account,
