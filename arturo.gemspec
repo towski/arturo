@@ -1,6 +1,6 @@
 # my_rails_engine.gemspec
 Gem::Specification.new do |gem|
-  gem.version = '2.0.0'
+  gem.version = '2.1.0'
   gem.name = 'arturo'
   gem.files = Dir["lib/**/*", "app/**/*", "config/**/*"] + %w(README.md CHANGELOG.md LICENSE)
   gem.summary = "Feature sliders, wrapped up in an engine"
@@ -24,6 +24,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency  'rake',         '~> 10.3'
   gem.add_development_dependency  'minitest',     '> 0', '< 6.0'
   gem.add_development_dependency  'minitest-rg',  '> 0', '< 6.0'
+  gem.add_development_dependency  'rails-dom-testing', '~> 1.0'
   gem.add_development_dependency  'sqlite3',      '~> 1.3'
   gem.add_development_dependency  'factory_girl', '~> 4.2'
   gem.add_development_dependency  'timecop',      '~> 0.3'
